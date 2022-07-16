@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Roullete : MonoBehaviour
+public class Roulette : MonoBehaviour
 {
 
     //References
@@ -40,26 +40,22 @@ public class Roullete : MonoBehaviour
     }
 
     private void animationShowDice6(int value){
-        //DiceSix.animate;
+        DiceSix.transform.position = InitialDiceSixValue;
+        DiceSix.SetActive(true);
     }
 
     private void animationShowDice20(int value){
-        //DiceTwenty.animate;
+        DiceTwenty.transform.position = InitialDiceTwentyValue;
+        DiceTwenty.SetActive(true);
     }
 
-    public void startRoullete(){
-        //Reset and Activate Dice First
-        DiceSix.transform.position = InitialDiceSixValue;
-        DiceTwenty.transform.position = InitialDiceTwentyValue;
-        DiceSix.SetActive(true);
-        DiceTwenty.SetActive(true);
-        //Set Value
+    public void startRoulette(){
         currForce = force;
         RollDiceSix();
         RollDiceTwenty();
     }
 
-    public void stopRoullete(){
+    public void stopRoulette(){
         DiceSix.SetActive(false);
         DiceTwenty.SetActive(false);
     }

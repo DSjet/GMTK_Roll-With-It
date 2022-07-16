@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b307f1e988970904282dabe329b4e124, type: 3}
   m_Name: RandomizedDiceValue
   m_EditorClassIdentifier: 
-  TotalEnemy: 575
-  LastMap: 1
+  TotalEnemy: 0
+  LastMap: 0
