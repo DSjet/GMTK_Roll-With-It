@@ -10,6 +10,7 @@ public class PlayerBehavior : MonoBehaviour
     private void Start()
     {
         HealthBar = GameObject.FindGameObjectWithTag("healthbar").transform;
+        HealthBar.gameObject.GetComponent<Image>().fillAmount = GameManager.gameManager._playerHealth.GetPerHealth();
     }
 
     void Update()

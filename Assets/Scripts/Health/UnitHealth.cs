@@ -59,6 +59,10 @@ public class UnitHealth
     {
         return _curHealth / _curMaxHealth;
     }
+    public int GetHealth()
+    {
+        return (int)_curHealth;
+    }
     public void SetMaxhealth(float maxhealth)
     {
         _curMaxHealth = maxhealth;
