@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class WorldChange : MonoBehaviour
 {
     Scene currentWorld;
-    int currentBuildIndex;
+    public int currentBuildIndex;
     private int randNumber;
     int nextBuildIndex;
 
@@ -17,9 +17,9 @@ public class WorldChange : MonoBehaviour
     void Start(){
         currentWorld = SceneManager.GetActiveScene();
         currentBuildIndex = currentWorld.buildIndex;
-        randNumber = Random.Range(0,5);
+        randNumber = Random.Range(0,6);
         while(randNumber == currentBuildIndex){
-            randNumber = Random.Range(0,5);
+            randNumber = Random.Range(0,6);
         }
         nextBuildIndex = randNumber;
 

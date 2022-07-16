@@ -7,19 +7,25 @@ public class PlayerBehavior : MonoBehaviour
 {
     public Transform HealthBar;
 
+    private void Start()
+    {
+        HealthBar = GameObject.FindGameObjectWithTag("healthbar").transform;
+    }
+
     void Update()
     {
         
         if (Input.GetKeyDown(KeyCode.Space))
-        
-        PlayerTakeDmg(1);
-        Debug.Log(GameManager.gameManager._playerHealth.Health);
+        {
+            PlayerTakeDmg(1);
+            Debug.Log(GameManager.gameManager._playerHealth.Health);
+        }
         
         if (Input.GetKeyDown(KeyCode.LeftShift))
-        
-        PlayerHeal(1);
-        Debug.Log(GameManager.gameManager._playerHealth.Health);
-        
+        {
+            PlayerHeal(1);
+            Debug.Log(GameManager.gameManager._playerHealth.Health);
+        }
         
     }
 

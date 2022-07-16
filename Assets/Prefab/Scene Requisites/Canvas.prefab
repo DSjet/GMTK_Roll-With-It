@@ -443,8 +443,8 @@ GameObject:
   - component: {fileID: 6937911137021807529}
   - component: {fileID: 6318194416336462796}
   m_Layer: 5
-  m_Name: Background (1)
-  m_TagString: Untagged
+  m_Name: HealthFill
+  m_TagString: healthbar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -465,8 +465,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -10.724, y: -4.826}
-  m_SizeDelta: {x: 260.72, y: 40.348}
+  m_AnchoredPosition: {x: -10.723999, y: -1.7010002}
+  m_SizeDelta: {x: 260.72, y: 34.098}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &6937911137021807529
 CanvasRenderer:
@@ -497,10 +497,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 53a910f02bb52d94283bb2f828a50274, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
