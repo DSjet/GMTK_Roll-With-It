@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class WorldChange : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class WorldChange : MonoBehaviour
     private int randNumber;
     int nextBuildIndex;
 
+    GameObject holder;
+    [SerializeField] Texture[] images = new Texture[6];
+
     void Start(){
         currentWorld = SceneManager.GetActiveScene();
         currentBuildIndex = currentWorld.buildIndex;
@@ -17,7 +21,10 @@ public class WorldChange : MonoBehaviour
         while(randNumber == currentBuildIndex){
             randNumber = Random.Range(0,5);
         }
-        nextBuildIndex = randNumber; 
+        nextBuildIndex = randNumber;
+
+        holder = GameObject.FindGameObjectWithTag("WorldIcon");
+        holder.GetComponent<RawImage>().texture = images[currentBuildIndex];
     }
     public void ChangeScene(){
         SceneManager.LoadScene(nextBuildIndex);

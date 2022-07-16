@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerBehavior : MonoBehaviour
 {
@@ -9,27 +10,27 @@ public class PlayerBehavior : MonoBehaviour
     void Update()
     {
         
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    PlayerTakeDmg(1);
-        //    Debug.Log(GameManager.gameManager._playerHealth.Health);
-        //}
-        //if (Input.GetKeyDown(KeyCode.LeftShift))
-        //{
-        //    PlayerHeal(1);
-        //    Debug.Log(GameManager.gameManager._playerHealth.Health);
-        //}
+        if (Input.GetKeyDown(KeyCode.Space))
+        
+        PlayerTakeDmg(1);
+        Debug.Log(GameManager.gameManager._playerHealth.Health);
+        
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        
+        PlayerHeal(1);
+        Debug.Log(GameManager.gameManager._playerHealth.Health);
+        
         
     }
 
     private void PlayerTakeDmg(int dmg)
     {
         GameManager.gameManager._playerHealth.DamageUnit(dmg);
-        HealthBar.localScale = new Vector3(GameManager.gameManager._playerHealth.GetPerHealth(), 1f);
+        HealthBar.gameObject.GetComponent<Image>().fillAmount = GameManager.gameManager._playerHealth.GetPerHealth();
     }
     private void PlayerHeal(int heal)
     {
         GameManager.gameManager._playerHealth.HealUnit(heal);
-        HealthBar.localScale = new Vector3(GameManager.gameManager._playerHealth.GetPerHealth(), 1f);
+        HealthBar.gameObject.GetComponent<Image>().fillAmount = GameManager.gameManager._playerHealth.GetPerHealth();
     }
 }

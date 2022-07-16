@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!224 &33124124 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 8477459125968362424, guid: ccb1b6249474cb44fa53b9dd4877fdf4, type: 3}
-  m_PrefabInstance: {fileID: 8477459125960553636}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &342775899
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,7 +1016,7 @@ PrefabInstance:
     - target: {fileID: 3007865131924635455, guid: b2b8d451e50b17b43bd70cf24c73072c, type: 3}
       propertyPath: HealthBar
       value: 
-      objectReference: {fileID: 33124124}
+      objectReference: {fileID: 8477459125960553637}
     - target: {fileID: 3007865131924635586, guid: b2b8d451e50b17b43bd70cf24c73072c, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1180,5 +1175,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6376718451191628289, guid: ccb1b6249474cb44fa53b9dd4877fdf4, type: 3}
+      propertyPath: m_Name
+      value: HealthFill
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccb1b6249474cb44fa53b9dd4877fdf4, type: 3}
+--- !u!224 &8477459125960553637 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6522626276629851365, guid: ccb1b6249474cb44fa53b9dd4877fdf4, type: 3}
+  m_PrefabInstance: {fileID: 8477459125960553636}
+  m_PrefabAsset: {fileID: 0}

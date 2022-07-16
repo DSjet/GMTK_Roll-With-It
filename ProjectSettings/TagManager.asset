@@ -6,6 +6,7 @@ TagManager:
   tags:
   - VirtualCam
   - Enemy
+  - WorldIcon
   layers:
   - Default
   - TransparentFX
