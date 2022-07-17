@@ -23,13 +23,13 @@ public class Roulette : MonoBehaviour
 
     void Start(){
         DiceTwenty.SetText(TotalEnemy.SpawnEnemies20Dice.ToString());
-        DiceSix.sprite = DiceSixSprites[TotalEnemy.LastMap6Dice];
         TotalEnemy.LastMap6Dice = SceneManager.GetActiveScene().buildIndex;
+        DiceSix.sprite = DiceSixSprites[TotalEnemy.LastMap6Dice];
         StartCoroutine("startRouletteAfter");
     }
     // Roll Dice Function
     public void RollDiceSix(){
-        int RandomizedValue = (TotalEnemy.LastMap6Dice + Random.Range(1,5)) % 6;
+        int RandomizedValue = (TotalEnemy.LastMap6Dice + Random.Range(1,6)) % 6;
         resDice6 = RandomizedValue;
         TotalEnemy.LastMap6Dice = RandomizedValue;
     }
