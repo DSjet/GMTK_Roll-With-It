@@ -100,9 +100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37fcd912eb4954460878d0de1257a966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  checkRadius: 7
-  attackRadius: 4
+  speed: 5
+  checkRadius: 100
+  attackRadius: 10
   shouldRotate: 1
   playerLayer:
     serializedVersion: 2

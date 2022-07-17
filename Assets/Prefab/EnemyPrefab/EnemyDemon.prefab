@@ -103,7 +103,7 @@ MonoBehaviour:
   firePoint: {fileID: 2611802482064140815}
   bulletPrefab: {fileID: 7464657295748190164, guid: f7913a36461620048b0c99ac41768f7a, type: 3}
   bulletForce: 20
-  fireRate: 5
+  fireRate: 3
   canShoot: 1
 --- !u!114 &2611802480534453898
 MonoBehaviour:
@@ -117,9 +117,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37fcd912eb4954460878d0de1257a966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  checkRadius: 7
-  attackRadius: 4
+  speed: 6
+  checkRadius: 100
+  attackRadius: 13
   shouldRotate: 1
   playerLayer:
     serializedVersion: 2

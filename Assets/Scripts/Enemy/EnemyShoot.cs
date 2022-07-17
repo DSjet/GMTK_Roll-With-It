@@ -9,7 +9,7 @@ public class EnemyShoot : MonoBehaviour
     AnimatorClipInfo[] m_CurrentClipInfo;
 
     public float bulletForce = 20f;
-    public float fireRate = 5f;
+    public float fireRate;
     public bool canShoot = true;
 
     void Update()
