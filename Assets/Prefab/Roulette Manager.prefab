@@ -357,12 +357,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DiceSix: {fileID: 4384801222953356759}
   DiceSixSprites:
+  - {fileID: 1176586727454240344, guid: 5928abd604260e946a1e8157ea5487c7, type: 3}
+  - {fileID: 2749397622425129900, guid: 5928abd604260e946a1e8157ea5487c7, type: 3}
   - {fileID: 3383016452190782798, guid: 5928abd604260e946a1e8157ea5487c7, type: 3}
   - {fileID: 5317832434711080195, guid: 5928abd604260e946a1e8157ea5487c7, type: 3}
-  - {fileID: 2749397622425129900, guid: 5928abd604260e946a1e8157ea5487c7, type: 3}
-  - {fileID: 1176586727454240344, guid: 5928abd604260e946a1e8157ea5487c7, type: 3}
-  - {fileID: -4957464051629469780, guid: 5928abd604260e946a1e8157ea5487c7, type: 3}
   - {fileID: 484915183045301739, guid: 5928abd604260e946a1e8157ea5487c7, type: 3}
+  - {fileID: -4957464051629469780, guid: 5928abd604260e946a1e8157ea5487c7, type: 3}
   DiceTwenty: {fileID: 5341384910939112794}
   TotalEnemy: {fileID: 11400000, guid: d9e80b24be026fe4abe00697a670b1fe, type: 2}
   RandomizerDice: 10

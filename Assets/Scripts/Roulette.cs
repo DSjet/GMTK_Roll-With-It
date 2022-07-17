@@ -19,15 +19,15 @@ public class Roulette : MonoBehaviour
 
     // Roll Dice Function
     public void RollDiceSix(){
-        int RandomizedValue = (TotalEnemy.LastMap + Random.Range(1,5)) % 6;
+        int RandomizedValue = (TotalEnemy.LastMap6Dice + Random.Range(1,5)) % 6;
         resDice6 = RandomizedValue;
-        TotalEnemy.LastMap = RandomizedValue;
+        TotalEnemy.LastMap6Dice = RandomizedValue;
     }
 
     public void RollDiceTwenty(){
         int RandomizedValue = Random.Range(1,20);
         resDice20 = RandomizedValue;
-        TotalEnemy.TotalEnemy += RandomizedValue;
+        TotalEnemy.SpawnEnemies20Dice = RandomizedValue;
         StartCoroutine("animateAll");
     }
 
@@ -64,7 +64,7 @@ public class Roulette : MonoBehaviour
     }
 
     public void resetSOValue(){
-        TotalEnemy.TotalEnemy = 0;
-        TotalEnemy.LastMap = 0;
+        TotalEnemy.SpawnEnemies20Dice = 0;
+        TotalEnemy.LastMap6Dice = 0;
     }
 }

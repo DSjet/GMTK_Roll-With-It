@@ -5,6 +5,6 @@ using UnityEngine;
 [CreateAssetMenu]
 public class ValueRnd : ScriptableObject
 {
-    public int TotalEnemy;
-    public int LastMap;
+    public int SpawnEnemies20Dice;
+    public int LastMap6Dice;
 }
