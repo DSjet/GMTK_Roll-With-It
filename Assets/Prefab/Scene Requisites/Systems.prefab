@@ -100,6 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   worldChange: {fileID: 0}
   TotalEnemy: {fileID: 11400000, guid: d9e80b24be026fe4abe00697a670b1fe, type: 2}
+  uis: {fileID: 0}
   enemiesRemaining: 2
 --- !u!1 &6915570696938906219
 GameObject:

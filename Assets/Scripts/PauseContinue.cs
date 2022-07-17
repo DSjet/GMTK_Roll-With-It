@@ -8,6 +8,8 @@ public class PauseContinue : MonoBehaviour
 {
     private bool isPaused = false;
     public GameObject pauseMenu;
+    public GameObject loseMenu;
+    private bool hasLost = false;
 
     private void Start()
     {
@@ -16,19 +18,17 @@ public class PauseContinue : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+
+        if (isPaused && !hasLost)
         {
-            if (isPaused)
-            {
+            if (Input.GetKeyDown(KeyCode.Escape))
                 ResumeGame();
-            }
-            else
-            {
-                PauseGame();
-            }
         }
-
-
+        else if(!isPaused && !hasLost)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+                PauseGame();
+        }
     }
 
     public void PauseGame()
@@ -65,5 +65,13 @@ public class PauseContinue : MonoBehaviour
             pauseMenu.SetActive(false);
         }
 
+    }
+
+    public void Lost()
+    {
+        Time.timeScale = 0;
+        isPaused = true;
+        hasLost = true;
+        pauseMenu.SetActive(true);
     }
 }

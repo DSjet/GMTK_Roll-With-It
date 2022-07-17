@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public WorldChange worldChange;
     public UnitHealth _playerHealth;
     public ValueRnd TotalEnemy;
+    public PauseContinue uis;
 
     public int enemiesRemaining = 1;
 
@@ -68,6 +69,11 @@ public class GameManager : MonoBehaviour
         {
             Win();
         }
+        if (_playerHealth.GetHealth() <= 0)
+        {
+            Debug.Log("Lost!");
+            Lose();
+        }
 
     }
 
@@ -108,6 +114,6 @@ public class GameManager : MonoBehaviour
     }
     public void Lose()
     {
-
+        uis.Lost();
     }
 }

@@ -29,4 +29,12 @@ public class EnemyHealth : MonoBehaviour
         SavedInfo.enemiesKilled++;
         MobSpawner.enemies--;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Obstacle")
+        {
+            Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+        }
+    }
 }

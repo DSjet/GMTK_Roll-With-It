@@ -129,7 +129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7107511436112737574, guid: f3ad5bfb280d75545bc54f4ab9be8c55, type: 3}
       propertyPath: sounds.Array.data[0].name
-      value: Heaven
+      value: Desert
       objectReference: {fileID: 0}
     - target: {fileID: 7107511436112737574, guid: f3ad5bfb280d75545bc54f4ab9be8c55, type: 3}
       propertyPath: sounds.Array.data[1].clip
@@ -141,7 +141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7107511436112737574, guid: f3ad5bfb280d75545bc54f4ab9be8c55, type: 3}
       propertyPath: sounds.Array.data[1].name
-      value: Desert
+      value: Heaven
       objectReference: {fileID: 0}
     - target: {fileID: 7107511436112737574, guid: f3ad5bfb280d75545bc54f4ab9be8c55, type: 3}
       propertyPath: sounds.Array.data[2].clip
