@@ -9,6 +9,10 @@ public class PauseContinue : MonoBehaviour
     private bool isPaused = false;
     public GameObject pauseMenu;
 
+    private void Start()
+    {
+        ResumeGame();
+    }
 
     private void Update()
     {
@@ -47,23 +51,8 @@ public class PauseContinue : MonoBehaviour
 
     public void ResetGame()
     {
-        //skills
-        PlayerPrefs.SetInt("a1", 0);
-        PlayerPrefs.SetInt("a2", 0);
-        PlayerPrefs.SetInt("a3", 0);
-        PlayerPrefs.SetInt("a4", 0);
-        PlayerPrefs.SetInt("a5", 0);
-        PlayerPrefs.SetInt("a6", 0);
-
-        //game progress save
         SavedInfo saves = GameObject.FindObjectOfType<SavedInfo>();
-        saves.playerHealth = 6;
-        for (int i = 0; i < saves.completed.Length; i++)
-        {
-            saves.completed[i] = false;
-        }
-        saves.levelsCompleted = 0;
-
+        saves.ResetSaves();
     }
 
     public void ResumeGame()

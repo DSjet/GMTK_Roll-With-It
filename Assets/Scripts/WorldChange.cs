@@ -27,6 +27,8 @@ public class WorldChange : MonoBehaviour
         holder.GetComponent<RawImage>().texture = images[currentBuildIndex];
     }
     public void ChangeScene(){
+        //enter things to do before next scene here
+        //...
         SceneManager.LoadScene(nextBuildIndex);
     }
 }

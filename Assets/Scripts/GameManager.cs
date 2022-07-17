@@ -30,8 +30,10 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
+            //testing
             enemiesRemaining--;
             Debug.Log("enemies left: " + enemiesRemaining);
+            SavedInfo.enemiesKilled++;
         }
         if (enemiesRemaining <= 0)
         {
