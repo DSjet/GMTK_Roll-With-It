@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Roulette : MonoBehaviour
 {
@@ -16,7 +18,15 @@ public class Roulette : MonoBehaviour
     public float RandomizerWaitTime = 0.05f;
     private int resDice6;
     private int resDice20;
+    public float ChangeSceneAfterMinutes = 2f;
+    private bool FlagForcedRoulette = true;
 
+    void Start(){
+        DiceTwenty.SetText(TotalEnemy.SpawnEnemies20Dice.ToString());
+        DiceSix.sprite = DiceSixSprites[TotalEnemy.LastMap6Dice];
+        TotalEnemy.LastMap6Dice = SceneManager.GetActiveScene().buildIndex;
+        StartCoroutine("startRouletteAfter");
+    }
     // Roll Dice Function
     public void RollDiceSix(){
         int RandomizedValue = (TotalEnemy.LastMap6Dice + Random.Range(1,5)) % 6;
@@ -57,14 +67,27 @@ public class Roulette : MonoBehaviour
         DiceTwenty.SetText(resDice20.ToString());
     }
 
+    private IEnumerator startRouletteAfter(){
+        yield return new WaitForSeconds(60f * ChangeSceneAfterMinutes);
+        StartCoroutine("startRolling");
+    }
+
+    public void ForceRoulette(){
+        if(FlagForcedRoulette){
+            StopAllCoroutines();
+            StartCoroutine("startRolling");
+            FlagForcedRoulette = false;
+        }
+    }
+
+    private IEnumerator startRolling(){
+        startRoulette();
+        yield return new WaitForSeconds(RandomizerWaitTime*RandomizerDice + 0.05f);
+        SceneManager.LoadScene(TotalEnemy.LastMap6Dice);
+    }
 
     public void startRoulette(){
         RollDiceSix();
         RollDiceTwenty();
-    }
-
-    public void resetSOValue(){
-        TotalEnemy.SpawnEnemies20Dice = 0;
-        TotalEnemy.LastMap6Dice = 0;
     }
 }

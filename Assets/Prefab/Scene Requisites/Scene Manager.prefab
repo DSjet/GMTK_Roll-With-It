@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentBuildIndex: 0
+  RouletteData: {fileID: 11400000, guid: d9e80b24be026fe4abe00697a670b1fe, type: 2}
   images:
   - {fileID: 2800000, guid: 6044a4e0afee1bd4bab6e8d320da55e8, type: 3}
   - {fileID: 2800000, guid: 6a72003a6cd79fa42876e73d9679c78a, type: 3}
