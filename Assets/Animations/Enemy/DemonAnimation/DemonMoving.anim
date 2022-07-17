@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FishShooting
+  m_Name: DemonMoving
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,18 +20,16 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 4890312029918183220, guid: 916fd347d9e321442a8dfe0f5552c20e, type: 3}
-    - time: 0.33333334
-      value: {fileID: 5145647810056828489, guid: 916fd347d9e321442a8dfe0f5552c20e, type: 3}
-    - time: 0.6666667
-      value: {fileID: 4890312029918183220, guid: 916fd347d9e321442a8dfe0f5552c20e, type: 3}
-    - time: 1
-      value: {fileID: -2943966704689135732, guid: 916fd347d9e321442a8dfe0f5552c20e, type: 3}
+      value: {fileID: -5681205703702761873, guid: a3547a7290c2c7141b06cf998761f9de, type: 3}
+    - time: 0.125
+      value: {fileID: -3270563954720493961, guid: a3547a7290c2c7141b06cf998761f9de, type: 3}
+    - time: 0.25
+      value: {fileID: 1608754265037750650, guid: a3547a7290c2c7141b06cf998761f9de, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 3
+  m_SampleRate: 8
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -46,16 +44,15 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 4890312029918183220, guid: 916fd347d9e321442a8dfe0f5552c20e, type: 3}
-    - {fileID: 5145647810056828489, guid: 916fd347d9e321442a8dfe0f5552c20e, type: 3}
-    - {fileID: 4890312029918183220, guid: 916fd347d9e321442a8dfe0f5552c20e, type: 3}
-    - {fileID: -2943966704689135732, guid: 916fd347d9e321442a8dfe0f5552c20e, type: 3}
+    - {fileID: -5681205703702761873, guid: a3547a7290c2c7141b06cf998761f9de, type: 3}
+    - {fileID: -3270563954720493961, guid: a3547a7290c2c7141b06cf998761f9de, type: 3}
+    - {fileID: 1608754265037750650, guid: a3547a7290c2c7141b06cf998761f9de, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.3333334
+    m_StopTime: 0.375
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

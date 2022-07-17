@@ -6,6 +6,7 @@ public class EnemyShoot : MonoBehaviour
 {
     [SerializeField] Transform firePoint;
     [SerializeField] GameObject bulletPrefab;
+    AnimatorClipInfo[] m_CurrentClipInfo;
 
     public float bulletForce = 20f;
     public float fireRate = 5f;
@@ -13,20 +14,19 @@ public class EnemyShoot : MonoBehaviour
 
     void Update()
     {
+        m_CurrentClipInfo = EnemyAI.anim.GetCurrentAnimatorClipInfo(0);
+        string name = m_CurrentClipInfo[0].clip.name;
         EnemyAI.anim.SetBool("isAttacking", EnemyAI.isInAttackRange && canShoot);
-        if (EnemyAI.anim.GetBool("isAttacking"))
+        if (name == "isShooting" && EnemyAI.anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && canShoot)
         {
-            if (EnemyAI.anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
-            {
-                StartCoroutine("BasicFire");
-            }
+            StartCoroutine("BasicFire");
+            canShoot = false;
         }
     }
 
     private IEnumerator BasicFire()
     {
         Shoot();
-        canShoot = false;
         yield return new WaitForSeconds(fireRate);
         canShoot = true;
     }
