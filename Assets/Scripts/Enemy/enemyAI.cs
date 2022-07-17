@@ -40,6 +40,8 @@ public class EnemyAI : MonoBehaviour
         
         dir = target.position - transform.position;
         angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        bool flipped = movement.x < 0;
+        transform.rotation = Quaternion.Euler(new Vector3(0f, flipped ? 0f : 180f, 0f));
         dir.Normalize();
         movement = dir;
         if(shouldRotate)
@@ -53,12 +55,10 @@ public class EnemyAI : MonoBehaviour
     {
         if(isInChaseRange && !isInAttackRange)
         {
-            rb.rotation = angle;
             MoveCharacter(movement);
         }
         if(isInAttackRange)
         {
-            rb.rotation = angle;
             rb.velocity = Vector2.zero;
         }
     }
