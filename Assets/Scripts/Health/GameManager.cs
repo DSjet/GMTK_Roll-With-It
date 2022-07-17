@@ -45,6 +45,27 @@ public class GameManager : MonoBehaviour
         if (GameObject.FindObjectOfType<SavedInfo>().completed[worldChange.currentBuildIndex] == false)
         {
             GameObject.FindObjectOfType<SavedInfo>().levelsCompleted++;
+            int world = worldChange.currentBuildIndex;
+            switch (world) {
+                case 0:
+                    PlayerPrefs.SetInt("a1", 1);
+                    break;
+                case 1:
+                    PlayerPrefs.SetInt("a2", 1);
+                    break;
+                case 2:
+                    PlayerPrefs.SetInt("a3", 1);
+                    break;
+                case 3:
+                    PlayerPrefs.SetInt("a4", 1);
+                    break;
+                case 4:
+                    PlayerPrefs.SetInt("a5", 1);
+                    break;
+                case 5:
+                    PlayerPrefs.SetInt("a6", 1);
+                    break;
+            }
         }
         GameObject.FindObjectOfType<SavedInfo>().completed[worldChange.currentBuildIndex] = true;
         GameObject.FindObjectOfType<SavedInfo>().playerHealth = _playerHealth.GetHealth();

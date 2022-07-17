@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class CharacterMove : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 5f;
+    public float moveSpeed = 5f;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Camera cam;
+    public Animator animator;
 
     public Vector2 movement;
     public Vector2 mousePosition;
@@ -22,6 +23,14 @@ public class CharacterMove : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+        if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+        {
+            animator.SetBool("Walk", true);
+        }else
+        {
+            animator.SetBool("Walk", false);
+
+        }
 
         mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
     }
@@ -32,7 +41,7 @@ public class CharacterMove : MonoBehaviour
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         //player direction
         Vector2 lookAt = mousePosition - rb.position;
-        float angle = Mathf.Atan2(lookAt.y, lookAt.x) * Mathf.Rad2Deg - 90f;
+        float angle = Mathf.Atan2(lookAt.y, lookAt.x) * Mathf.Rad2Deg;
         rb.rotation = angle;
     }
 }

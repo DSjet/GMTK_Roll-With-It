@@ -12,32 +12,6 @@ public class PowerupItems : MonoBehaviour
         Powers();
     }
 
-    private void Update()
-    {
-        //for testing
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            PlayerPrefs.SetInt("a1", 0);
-            PlayerPrefs.SetInt("a2", 0);
-            PlayerPrefs.SetInt("a3", 0);
-            PlayerPrefs.SetInt("a4", 0);
-            PlayerPrefs.SetInt("a5", 0);
-            Powers();
-            Debug.Log(PlayerPrefs.GetInt("a1"));
-
-        }
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            PlayerPrefs.SetInt("a1", 1);
-            PlayerPrefs.SetInt("a2", 1);
-            PlayerPrefs.SetInt("a3", 1);
-            PlayerPrefs.SetInt("a4", 1);
-            PlayerPrefs.SetInt("a5", 1);
-            Debug.Log(PlayerPrefs.GetInt("a1"));
-            Powers();
-        }
-    }
-
     private void Powers()
     {
         if (PlayerPrefs.GetInt("a1") == 1)
@@ -83,7 +57,22 @@ public class PowerupItems : MonoBehaviour
 
         if (PlayerPrefs.GetInt("a5") == 1)
         {
-            //...
+            //bonus speed
+            player.GetComponent<CharacterMove>().moveSpeed *= 1.25f;
+        }
+        else
+        {
+            player.GetComponent<CharacterMove>().moveSpeed = 10f;
+        }
+
+        if (PlayerPrefs.GetInt("a6") == 1)
+        {
+            //faster bullets
+            player.GetComponent<Shooting>().bulletForce = 75f;
+        }
+        else
+        {
+            player.GetComponent<Shooting>().bulletForce = 50f;
         }
     }
 

@@ -11,11 +11,13 @@ public class Shooting : MonoBehaviour
     public float fireRate = 1f;
     public bool canShoot = true;
     public bool altShooting = false;
+    public Animator animator;
 
     void Update()
     {
         if (Input.GetButton("Fire1") && canShoot)
         {
+            animator.SetTrigger("Fire");
             if (!altShooting)
             {
                 StartCoroutine("BasicFire");
@@ -52,5 +54,6 @@ public class Shooting : MonoBehaviour
         
         //adding force to bullet
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+
     }
 }

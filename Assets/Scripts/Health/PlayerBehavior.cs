@@ -16,17 +16,17 @@ public class PlayerBehavior : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            PlayerTakeDmg(1);
-            Debug.Log(GameManager.gameManager._playerHealth.Health);
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    PlayerTakeDmg(1);
+        //    Debug.Log(GameManager.gameManager._playerHealth.Health);
+        //}
         
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            PlayerHeal(1);
-            Debug.Log(GameManager.gameManager._playerHealth.Health);
-        }
+        //if (Input.GetKeyDown(KeyCode.LeftShift))
+        //{
+        //    PlayerHeal(1);
+        //    Debug.Log(GameManager.gameManager._playerHealth.Health);
+        //}
         
     }
 
