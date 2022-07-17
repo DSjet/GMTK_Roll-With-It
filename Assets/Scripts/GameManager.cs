@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager gameManager { get; private set; }
     public WorldChange worldChange;
     public UnitHealth _playerHealth;
+    public ValueRnd TotalEnemy;
 
     public int enemiesRemaining = 1;
 
@@ -26,19 +27,48 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        enemiesRemaining = TotalEnemy.SpawnEnemies20Dice;
+        int world = worldChange.currentBuildIndex;
+        switch (world)
+        {
+            case 0:
+                FindObjectOfType<SAudioManager>().Play("Sea");
+                break;
+            case 1:
+                FindObjectOfType<SAudioManager>().Play("Forest");
+                break;
+            case 2:
+                FindObjectOfType<SAudioManager>().Play("Heaven");
+                break;
+            case 3:
+                FindObjectOfType<SAudioManager>().Play("Hell");
+                break;
+            case 4:
+                FindObjectOfType<SAudioManager>().Play("Desert");
+                break;
+            case 5:
+                FindObjectOfType<SAudioManager>().Play("Space");
+                break;
+        }
+    }
+
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Backspace))
-        {
-            //testing
-            enemiesRemaining--;
-            Debug.Log("enemies left: " + enemiesRemaining);
-            SavedInfo.enemiesKilled++;
-        }
+        GameObject.FindObjectOfType<SavedInfo>().playerHealth = _playerHealth.GetHealth();
+        //if (Input.GetKeyDown(KeyCode.Backspace))
+        //{
+        //    //testing
+        //    enemiesRemaining--;
+        //    Debug.Log("enemies left: " + enemiesRemaining);
+        //    SavedInfo.enemiesKilled++;
+        //}
         if (enemiesRemaining <= 0)
         {
             Win();
         }
+
     }
 
     public void Win()
@@ -48,7 +78,8 @@ public class GameManager : MonoBehaviour
         {
             GameObject.FindObjectOfType<SavedInfo>().levelsCompleted++;
             int world = worldChange.currentBuildIndex;
-            switch (world) {
+            switch (world)
+            {
                 case 0:
                     PlayerPrefs.SetInt("a1", 1);
                     break;
@@ -57,6 +88,8 @@ public class GameManager : MonoBehaviour
                     break;
                 case 2:
                     PlayerPrefs.SetInt("a3", 1);
+                    _playerHealth.SetMaxhealth(12);
+                    _playerHealth.HealUnit(6);
                     break;
                 case 3:
                     PlayerPrefs.SetInt("a4", 1);

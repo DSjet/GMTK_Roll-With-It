@@ -45,9 +45,10 @@ GameObject:
   - component: {fileID: 7924762656931950750}
   - component: {fileID: 7924762656931950740}
   - component: {fileID: 7924762656931950747}
+  - component: {fileID: -4502705155933248026}
   m_Layer: 0
   m_Name: EnemyHornet
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 7924762656925286818}
-  bulletPrefab: {fileID: 7464657295748190164, guid: f7913a36461620048b0c99ac41768f7a, type: 3}
+  bulletPrefab: {fileID: 7877947354685028852, guid: 48d4ae41cd03dae4489f53393141388f, type: 3}
   bulletForce: 20
   fireRate: 2
   canShoot: 1
@@ -211,3 +212,16 @@ CapsuleCollider2D:
   m_Offset: {x: -0.33, y: -0.15}
   m_Size: {x: 0.44, y: 1.06}
   m_Direction: 0
+--- !u!114 &-4502705155933248026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7924762656931950749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63def989d1540f54c854d1bec1edf956, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 2

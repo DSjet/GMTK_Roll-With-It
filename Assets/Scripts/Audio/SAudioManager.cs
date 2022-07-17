@@ -12,7 +12,6 @@ public partial class SAudioManager : MonoBehaviour
 
     void Awake()
     {
-
         if (instance == null)
             instance = this;
         else
@@ -50,5 +49,20 @@ public partial class SAudioManager : MonoBehaviour
         }
 
         s.source.Play();
+    }
+
+    public void StopPlay(string sound)
+    {
+        Sound s = Array.Find(sounds, item => item.name == sound);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return;
+        }
+
+        s.source.volume = s.volume * (1f + UnityEngine.Random.Range(-s.volume / 2f, s.volume / 2f));
+        s.source.pitch = s.pitch * (1f + UnityEngine.Random.Range(-s.pitch / 2f, s.pitch / 2f));
+
+        s.source.Stop();
     }
 }

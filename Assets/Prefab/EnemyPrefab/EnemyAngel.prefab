@@ -45,9 +45,10 @@ GameObject:
   - component: {fileID: 7968128837298843530}
   - component: {fileID: 7968128837298843531}
   - component: {fileID: 7968128837298843528}
+  - component: {fileID: 8659381183095538626}
   m_Layer: 0
   m_Name: EnemyAngel
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 7968128837275373753}
-  bulletPrefab: {fileID: 7464657295748190164, guid: f7913a36461620048b0c99ac41768f7a, type: 3}
+  bulletPrefab: {fileID: 7877947354685028852, guid: 48d4ae41cd03dae4489f53393141388f, type: 3}
   bulletForce: 20
   fireRate: 5
   canShoot: 1
@@ -211,3 +212,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8659381183095538626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7968128837298843529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63def989d1540f54c854d1bec1edf956, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 2

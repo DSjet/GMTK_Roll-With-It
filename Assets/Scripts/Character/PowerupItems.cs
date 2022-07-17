@@ -38,7 +38,6 @@ public class PowerupItems : MonoBehaviour
         {
             //extra health
             GameManager.gameManager._playerHealth.SetMaxhealth(12);
-            GameManager.gameManager._playerHealth.HealUnit(6);
         }
         else
         {

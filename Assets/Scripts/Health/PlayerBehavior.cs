@@ -30,7 +30,7 @@ public class PlayerBehavior : MonoBehaviour
         
     }
 
-    private void PlayerTakeDmg(int dmg)
+    public void PlayerTakeDmg(int dmg)
     {
         GameManager.gameManager._playerHealth.DamageUnit(dmg);
         HealthBar.gameObject.GetComponent<Image>().fillAmount = GameManager.gameManager._playerHealth.GetPerHealth();

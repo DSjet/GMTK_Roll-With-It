@@ -17,12 +17,16 @@ public class EnemyHealth : MonoBehaviour
         _unitHealth.DamageUnit(dmg);
         if (_unitHealth.Health <= 0)
         {
+
             unitDeath();
         }
     }
 
     private void unitDeath()
     {
+        GameManager.gameManager.enemiesRemaining--;
         Destroy(this.gameObject);
+        SavedInfo.enemiesKilled++;
+        MobSpawner.enemies--;
     }
 }
