@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyAI : MonoBehaviour
+public class EnemyAI : MonoBehaviour
 {
     public float speed;
     public float checkRadius;
@@ -15,13 +15,13 @@ public class enemyAI : MonoBehaviour
 
     private Transform target;
     private Rigidbody2D rb;
-    private Animator anim;
     private Vector2 movement;
     private float angle;
     public Vector3 dir;
+    public static Animator anim;
 
-    private bool isInChaseRange;
-    private bool isInAttackRange;
+    public static bool isInChaseRange;
+    public static bool isInAttackRange;
 
     private void Start()
     {
