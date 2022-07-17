@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour
     {
         enemiesRemaining = TotalEnemy.SpawnEnemies20Dice;
         int world = worldChange.currentBuildIndex;
+        uis = FindObjectOfType<PauseContinue>();
+
         switch (world)
         {
             case 0:
@@ -73,6 +75,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Lost!");
             Lose();
+            _playerHealth.HealUnit(1);
         }
 
     }

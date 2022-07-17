@@ -13,8 +13,9 @@ public class MainMenu : MonoBehaviour
         randNumber = Random.Range(0, 6);
         nextBuildIndex = randNumber;
         ChangeScene();
-
+        GameObject.FindObjectOfType<SavedInfo>().ResetSaves();
     }
+
     public void ChangeScene()
     {
         SceneManager.LoadScene(nextBuildIndex);

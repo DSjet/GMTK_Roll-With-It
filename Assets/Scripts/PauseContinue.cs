@@ -9,11 +9,15 @@ public class PauseContinue : MonoBehaviour
     private bool isPaused = false;
     public GameObject pauseMenu;
     public GameObject loseMenu;
-    private bool hasLost = false;
+    public bool hasLost = false;
 
     private void Start()
     {
+        loseMenu.SetActive(false);
         ResumeGame();
+        isPaused = false;
+        hasLost = false;
+
     }
 
     private void Update()
@@ -46,6 +50,7 @@ public class PauseContinue : MonoBehaviour
     {
         ResumeGame();
         ResetGame();
+        hasLost = false;
         SceneManager.LoadScene("MainMenu");
     }
 
@@ -72,6 +77,6 @@ public class PauseContinue : MonoBehaviour
         Time.timeScale = 0;
         isPaused = true;
         hasLost = true;
-        pauseMenu.SetActive(true);
+        loseMenu.SetActive(true);
     }
 }
