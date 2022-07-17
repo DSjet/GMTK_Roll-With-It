@@ -152,7 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   checkRadius: 100
-  attackRadius: 1.5
+  attackRadius: 1
   shouldRotate: 1
   playerLayer:
     serializedVersion: 2
