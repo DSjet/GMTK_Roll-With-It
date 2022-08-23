@@ -152,7 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   checkRadius: 100
-  attackRadius: 1.5
+  attackRadius: 2
   shouldRotate: 1
   playerLayer:
     serializedVersion: 2
@@ -171,9 +171,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 3329694759930929694}
-  bulletPrefab: {fileID: 7464657295748190164, guid: f7913a36461620048b0c99ac41768f7a, type: 3}
+  bulletPrefab: {fileID: 7877947354685028852, guid: 48d4ae41cd03dae4489f53393141388f, type: 3}
   bulletForce: 20
-  fireRate: 5
+  fireRate: 1
   canShoot: 1
 --- !u!50 &3329694759941575464
 Rigidbody2D:

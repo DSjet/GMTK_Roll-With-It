@@ -17,7 +17,7 @@ public class PauseContinue : MonoBehaviour
         ResumeGame();
         isPaused = false;
         hasLost = false;
-
+        Time.timeScale = 1;
     }
 
     private void Update()
@@ -69,7 +69,6 @@ public class PauseContinue : MonoBehaviour
             isPaused = false;
             pauseMenu.SetActive(false);
         }
-
     }
 
     public void Lost()
@@ -77,6 +76,7 @@ public class PauseContinue : MonoBehaviour
         Time.timeScale = 0;
         isPaused = true;
         hasLost = true;
+        ResetGame();
         loseMenu.SetActive(true);
     }
 }

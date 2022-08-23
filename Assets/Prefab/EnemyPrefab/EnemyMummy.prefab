@@ -154,7 +154,7 @@ MonoBehaviour:
   firePoint: {fileID: 6725521004742814002}
   bulletPrefab: {fileID: 7877947354685028852, guid: 48d4ae41cd03dae4489f53393141388f, type: 3}
   bulletForce: 20
-  fireRate: 5
+  fireRate: 1
   canShoot: 1
 --- !u!95 &6725521004881030038
 Animator:

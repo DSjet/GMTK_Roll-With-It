@@ -17,7 +17,7 @@ public class WorldChange : MonoBehaviour
 
     void Start(){
         roulette = FindObjectOfType<Roulette>();
-        currentBuildIndex = SceneManager.GetActiveScene().buildIndex;
+        currentBuildIndex = SceneManager.GetActiveScene().buildIndex - 1;
         holder = GameObject.FindGameObjectWithTag("WorldIcon");
         holder.GetComponent<RawImage>().texture = images[currentBuildIndex];
     }

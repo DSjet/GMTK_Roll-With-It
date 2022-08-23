@@ -21,15 +21,18 @@ public class Roulette : MonoBehaviour
     public float ChangeSceneAfterMinutes = 2f;
     private bool FlagForcedRoulette = true;
 
-    void Start(){
+    void Start() {
         DiceTwenty.SetText(TotalEnemy.SpawnEnemies20Dice.ToString());
         TotalEnemy.LastMap6Dice = SceneManager.GetActiveScene().buildIndex;
-        DiceSix.sprite = DiceSixSprites[TotalEnemy.LastMap6Dice];
+        Debug.Log("Last 6 dice is " + TotalEnemy.LastMap6Dice);
+        int num = TotalEnemy.LastMap6Dice - 1;
+        if (num <= 0) num = 0;
+        DiceSix.sprite = DiceSixSprites[num];
         StartCoroutine("startRouletteAfter");
     }
     // Roll Dice Function
     public void RollDiceSix(){
-        int RandomizedValue = (TotalEnemy.LastMap6Dice + Random.Range(1,6)) % 6;
+        int RandomizedValue = (TotalEnemy.LastMap6Dice + Random.Range(0,6)) % 6;
         resDice6 = RandomizedValue;
         TotalEnemy.LastMap6Dice = RandomizedValue;
     }
@@ -83,7 +86,7 @@ public class Roulette : MonoBehaviour
     private IEnumerator startRolling(){
         startRoulette();
         yield return new WaitForSeconds(RandomizerWaitTime*RandomizerDice + 0.05f);
-        SceneManager.LoadScene(TotalEnemy.LastMap6Dice);
+        SceneManager.LoadScene(TotalEnemy.LastMap6Dice + 1);
     }
 
     public void startRoulette(){

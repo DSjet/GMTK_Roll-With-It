@@ -189,6 +189,82 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1028009735
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3740419330261794024, guid: 8de041594a1aac1449df2118089d5ca0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 9999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4262749997561135608, guid: 8de041594a1aac1449df2118089d5ca0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 9999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613151823822982692, guid: 8de041594a1aac1449df2118089d5ca0, type: 3}
+      propertyPath: m_Name
+      value: Roulette Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613151823822982698, guid: 8de041594a1aac1449df2118089d5ca0, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613151823822982698, guid: 8de041594a1aac1449df2118089d5ca0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613151823822982698, guid: 8de041594a1aac1449df2118089d5ca0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.24434881
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613151823822982698, guid: 8de041594a1aac1449df2118089d5ca0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.298865
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613151823822982698, guid: 8de041594a1aac1449df2118089d5ca0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613151823822982698, guid: 8de041594a1aac1449df2118089d5ca0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613151823822982698, guid: 8de041594a1aac1449df2118089d5ca0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613151823822982698, guid: 8de041594a1aac1449df2118089d5ca0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613151823822982698, guid: 8de041594a1aac1449df2118089d5ca0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613151823822982698, guid: 8de041594a1aac1449df2118089d5ca0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613151823822982698, guid: 8de041594a1aac1449df2118089d5ca0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8de041594a1aac1449df2118089d5ca0, type: 3}
+--- !u!114 &1028009736 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5732663654588431674, guid: 8de041594a1aac1449df2118089d5ca0, type: 3}
+  m_PrefabInstance: {fileID: 1028009735}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f3eeabe68385bf42a74fc347dfd97f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1505179023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -341,6 +417,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5348276538579629723, guid: 8afa183cdc2929e49bd3883cf901eaa6, type: 3}
+      propertyPath: roulette
+      value: 
+      objectReference: {fileID: 1028009736}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8afa183cdc2929e49bd3883cf901eaa6, type: 3}
 --- !u!1001 &4033472819230890756

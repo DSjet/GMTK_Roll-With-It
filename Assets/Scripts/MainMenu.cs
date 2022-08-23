@@ -7,17 +7,18 @@ public class MainMenu : MonoBehaviour
 {
     int randNumber;
     int nextBuildIndex;
+    public Roulette roulette;
 
     public void StartGame()
     {
         randNumber = Random.Range(0, 6);
         nextBuildIndex = randNumber;
-        ChangeScene();
         GameObject.FindObjectOfType<SavedInfo>().ResetSaves();
+        ChangeScene();
     }
 
     public void ChangeScene()
     {
-        SceneManager.LoadScene(nextBuildIndex);
+        roulette.ForceRoulette();
     }
 }

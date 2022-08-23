@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class MobSpawner : MonoBehaviour
 {
-    public int enemiesToGo = 5;
+    public int enemiesToGo;
     public float spawnTimer = 0;
     public float waitTime = 2;
     public int maxEnemies = 5;
@@ -18,14 +18,12 @@ public class MobSpawner : MonoBehaviour
     protected float height, width;
     int currentBuildIndex;
 
-
-    // Update is called once per frame
-
     private void Start()
     {
         cam = Camera.main;
+        enemies = 0;
         enemiesToGo = GameManager.gameManager.enemiesRemaining;
-        currentBuildIndex = SceneManager.GetActiveScene().buildIndex;
+        currentBuildIndex = SceneManager.GetActiveScene().buildIndex - 1;
         maxEnemies += GameObject.FindObjectOfType<SavedInfo>().levelsCompleted;
     }
 
