@@ -34,26 +34,35 @@ public class GameManager : MonoBehaviour
         int world = worldChange.currentBuildIndex;
         uis = FindObjectOfType<PauseContinue>();
 
-        switch (world)
+
+        
+        if (SceneManager.GetActiveScene().name == "World_0")
         {
-            case 0:
-                FindObjectOfType<SAudioManager>().Play("Sea");
-                break;
-            case 1:
-                FindObjectOfType<SAudioManager>().Play("Forest");
-                break;
-            case 2:
-                FindObjectOfType<SAudioManager>().Play("Heaven");
-                break;
-            case 3:
-                FindObjectOfType<SAudioManager>().Play("Hell");
-                break;
-            case 4:
-                FindObjectOfType<SAudioManager>().Play("Desert");
-                break;
-            case 5:
-                FindObjectOfType<SAudioManager>().Play("Space");
-                break;
+            FindObjectOfType<SAudioManager>().Play("Sea");
+        }
+        else if (SceneManager.GetActiveScene().name == "World_1")
+        {
+            FindObjectOfType<SAudioManager>().Play("Forest");
+        }
+        else if (SceneManager.GetActiveScene().name == "World_2")
+        {
+            FindObjectOfType<SAudioManager>().Play("Heaven");
+
+        }
+        else if (SceneManager.GetActiveScene().name == "World_3")
+        {
+            FindObjectOfType<SAudioManager>().Play("Hell");
+
+        }
+        else if (SceneManager.GetActiveScene().name == "World_4")
+        {
+            FindObjectOfType<SAudioManager>().Play("Desert");
+
+        }
+        else if (SceneManager.GetActiveScene().name == "World_5")
+        {
+            FindObjectOfType<SAudioManager>().Play("Space");
+
         }
     }
 
