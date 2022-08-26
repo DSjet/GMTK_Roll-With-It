@@ -139,7 +139,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6725521004742814003}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.67, y: 0.38, z: 0}
+  m_LocalPosition: {x: -1.1, y: 0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6725521004881030034}
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   checkRadius: 100
-  attackRadius: 1
+  attackRadius: 2
   shouldRotate: 1
   playerLayer:
     serializedVersion: 2
@@ -270,7 +270,7 @@ MonoBehaviour:
   firePoint: {fileID: 6725521004742814002}
   bulletPrefab: {fileID: 7877947354685028852, guid: 48d4ae41cd03dae4489f53393141388f, type: 3}
   bulletForce: 20
-  fireRate: 1
+  fireRate: 0.7
   canShoot: 1
 --- !u!95 &6725521004881030038
 Animator:
